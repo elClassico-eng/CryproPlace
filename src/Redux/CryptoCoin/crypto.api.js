@@ -22,7 +22,7 @@ export const coinApi = createApi({
             query: (id) => `/coin/${id}`,
         }),
         getAllCoin: builder.query({
-            query: () => "/coins",
+            query: (count) => `/coins?limit=${count}`,
             transformResponse: (response) => response.data,
         }),
     }),

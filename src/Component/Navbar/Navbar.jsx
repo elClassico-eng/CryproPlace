@@ -8,8 +8,8 @@ import avatar from "../../Images/cryptocurrency.png";
 
 export const Navbar = () => {
     return (
-        <div className="flex  flex-col w-1/4 h-screen bg-bgColor p-4">
-            <div className="flex h-1/4 w-full justify-between">
+        <div className="flex flex-col fixed  w-1/5 z-10 h-screen bg-bgColor p-4">
+            <div className="flex  h-1/4 w-full justify-between">
                 <Link to="/">
                     <h1 className="text-4xl font-semibold">CryptoPlace</h1>
                 </Link>
