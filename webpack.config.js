@@ -1,5 +1,8 @@
+const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+require("dotenv").config({ path: "./.env" });
 
 module.exports = (env) => {
     const isDev = env.mode === "development";
@@ -16,6 +19,9 @@ module.exports = (env) => {
         plugins: [
             new HtmlWebpackPlugin({
                 template: path.resolve(__dirname, "public", "index.html"),
+            }),
+            new webpack.DefinePlugin({
+                "process.env": JSON.stringify(process.env),
             }),
         ],
         module: {
@@ -36,6 +42,21 @@ module.exports = (env) => {
                 {
                     test: /\.css$/i,
                     use: ["style-loader", "css-loader", "postcss-loader"],
+                },
+                {
+                    test: /\.(png|jpe?g|gif)$/i,
+                    use: [
+                        {
+                            loader: "file-loader",
+                            options: {
+                                name: "[path][name].[ext]",
+                            },
+                        },
+                    ],
+                },
+                {
+                    test: /\.svg$/,
+                    loader: "svg-inline-loader",
                 },
             ],
         },
