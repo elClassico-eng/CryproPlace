@@ -2,10 +2,7 @@ import React from "react";
 import millify from "millify";
 import { Link } from "react-router-dom";
 
-import {
-    useLazyGetCoinByIdQuery,
-    useGetAllCoinQuery,
-} from "../Redux/CryptoCoin/crypto.api";
+import { useGetAllCoinQuery } from "../Redux/CryptoCoin/crypto.api";
 
 import { News } from "../Pages/News";
 import { Cryptocurrencies } from "../Pages/Cryptocurrencies";
@@ -20,8 +17,6 @@ export const HomePage = () => {
     }
 
     const coinInfo = data ?? {};
-
-    console.log(coinInfo);
 
     return (
         <div className="p-4 ml-[20%]">
