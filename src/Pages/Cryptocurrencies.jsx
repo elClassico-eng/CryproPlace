@@ -23,8 +23,6 @@ export const Cryptocurrencies = ({ limited }) => {
         throw new Error("Coin currencies is not defined!");
     }
 
-    console.log(data?.coins);
-
     return (
         <>
             {!limited && (
