@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import { useGetAllCoinQuery } from "../Redux/CryptoCoin/crypto.api";
-import { CardCoinInfo } from "../Component/CardCoinInfo/CardCoinInfo";
+import { useGetAllCoinQuery } from "../../Redux/CryptoCoin/crypto.api";
+import { CardCoinInfo } from "../../Component/CardCoinInfo/CardCoinInfo";
 
 export const Cryptocurrencies = ({ limited }) => {
     const count = limited ? 10 : 100;

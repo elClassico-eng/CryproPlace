@@ -1,42 +1,42 @@
 import React from "react";
 
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
-import { Navbar } from "./Navbar/Navbar";
-import { HomePage } from "../Pages/HomePage";
-import { Extanges } from "../Pages/Extanges";
-import { CryptoDetails } from "../Pages/CryptoDetails";
-import { Cryptocurrencies } from "../Pages/Cryptocurrencies";
-import { News } from "../Pages/News";
+import { LandingPage } from "../Pages/LandingPage/LandingPage";
+import { Navbar } from "./Dashboard/Navbar/Navbar";
+import { HomePage } from "../Pages/Dashboard/HomePage";
+import { Extanges } from "../Pages/Dashboard/Extanges";
+import { CryptoDetails } from "../Pages/Dashboard/CryptoDetails";
+import { Cryptocurrencies } from "../Pages/Dashboard/Cryptocurrencies";
+import { News } from "../Pages/Dashboard/News";
+import { Footer } from "./Dashboard/Footer/Footer";
 
 export const App = () => {
+    const location = useLocation();
+    const isDashBoard = location.pathname.startsWith("/dashboard");
+
     return (
         <div className="flex w-full h-screen">
-            <Navbar />
+            {isDashBoard && <Navbar />}
             <div className="flex w-full h-screen flex-col ">
                 <Routes>
-                    <Route path="/" element={<HomePage />}></Route>
+                    <Route path="/" element={<LandingPage />}></Route>
+                    <Route path="/dashboard" element={<HomePage />}></Route>
                     <Route
-                        path="/cryptocurrencies"
+                        path="/dashboard/cryptocurrencies"
                         element={<Cryptocurrencies />}
                     ></Route>
-                    <Route path="/extanges" element={<Extanges />}></Route>
                     <Route
-                        path="/crypto/:coinId"
+                        path="/dashboard/extanges"
+                        element={<Extanges />}
+                    ></Route>
+                    <Route
+                        path="/dashboard/crypto/:uuid"
                         element={<CryptoDetails />}
                     ></Route>
-                    <Route path="/news" element={<News />}></Route>
+                    <Route path="/dashboard/news" element={<News />}></Route>
                 </Routes>
-                <div className="flex gap-2 flex-col bg-bgColor items-center p-4">
-                    <h2 className="font-bold text-xl text-center text-textColor ">
-                        CryptoPlace <br /> All right reserved
-                    </h2>
-                    <div className="flex gap-3 text-white">
-                        <Link to="/">Home</Link>
-                        <Link to="/extanges">Extanges</Link>
-                        <Link to="/news">News</Link>
-                    </div>
-                </div>
+                {isDashBoard && <Footer />}
             </div>
         </div>
     );

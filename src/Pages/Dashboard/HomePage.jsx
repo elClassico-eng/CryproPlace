@@ -1,9 +1,9 @@
 import React from "react";
 
-import { useGetAllCoinQuery } from "../Redux/CryptoCoin/crypto.api";
+import { useGetAllCoinQuery } from "../../Redux/CryptoCoin/crypto.api";
 
-import { StatisticCard } from "../Component/StatisticCard/StatisticCard";
-import { ShowMore } from "../Component/ShowMore/ShowMore";
+import { StatisticCard } from "../../Component/StatisticCard/StatisticCard";
+import { ShowMore } from "../../Component/Dashboard/ShowMore/ShowMore";
 
 export const HomePage = () => {
     const {
@@ -22,7 +22,7 @@ export const HomePage = () => {
                 <h1 className="text-4xl font-semibold mb-1">
                     Global Crypto Stats
                 </h1>
-                <div className="border border-bgColor w-full"></div>
+                <div className="border border-black w-full"></div>
             </div>
             <div className="grid grid-rows-3 grid-cols-2 mb-14">
                 {isLoadingCoin && (
@@ -32,10 +32,10 @@ export const HomePage = () => {
             </div>
             <ShowMore
                 title="Top 10 Cryptocurrencies in the world!"
-                linkTo="/cryptocurrencies"
+                linkTo="/dashboard/cryptocurrencies"
                 currencies={true}
             />
-            <ShowMore title="Latest Crypto News" linkTo="/news" />
+            <ShowMore title="Latest Crypto News" linkTo="/dashboard/news" />
         </div>
     );
 };
