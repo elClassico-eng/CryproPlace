@@ -1,8 +1,8 @@
 import React from "react";
 
-import { useGetLastNewsQuery } from "../Redux/CryptoCoin/cryptoNews.api";
+import { useGetLastNewsQuery } from "../../Redux/CryptoCoin/cryptoNews.api";
 
-import { NewsCard } from "../Component/NewsCard/NewsCard";
+import { NewsCard } from "../../Component/NewsCard/NewsCard";
 
 export const News = () => {
     const { isLoading, isError, currentData: news } = useGetLastNewsQuery({});
@@ -13,6 +13,8 @@ export const News = () => {
                 <h1>Data missing. Try later!</h1>
             </div>
         );
+
+    console.log(news);
 
     return (
         <>

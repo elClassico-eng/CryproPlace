@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import home from "../../Images/Icons/home.png";
+import home from "../../../Images/Icons/home.png";
 
 export const NavbarMenu = ({ title, link }) => {
     return (
@@ -10,7 +10,7 @@ export const NavbarMenu = ({ title, link }) => {
             <Link to={link}>
                 <div className="flex items-center gap-2 text-lg font-normal">
                     <img src={home} alt="Home" className="h-[20px] w-[20px]" />
-                    <h3 className=" text-textColor">{title}</h3>
+                    <h3 className=" text-white">{title}</h3>
                 </div>
             </Link>
         </div>

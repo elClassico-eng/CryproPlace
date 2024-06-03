@@ -66,6 +66,8 @@ module.exports = (env) => {
         devServer: isDev && {
             port: env.port ?? 3000,
             open: true,
+            compress: true,
+            historyApiFallback: true,
         },
         devtool: isDev && "inline-source-map",
     };
