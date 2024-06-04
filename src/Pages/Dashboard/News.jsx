@@ -2,7 +2,7 @@ import React from "react";
 
 import { useGetLastNewsQuery } from "../../Redux/CryptoCoin/cryptoNews.api";
 
-import { NewsCard } from "../../Component/NewsCard/NewsCard";
+import { NewsCard } from "../../Component/Dashboard/NewsCard/NewsCard";
 
 export const News = () => {
     const { isLoading, isError, currentData: news } = useGetLastNewsQuery({});

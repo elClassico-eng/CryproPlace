@@ -1,7 +1,7 @@
 import React from "react";
 
 import moment from "moment";
-import bg from "../../Images/bgImag.jpg";
+import bg from "../../../Images/bgImag.jpg";
 
 export const NewsCard = ({ resource, index }) => {
     return (

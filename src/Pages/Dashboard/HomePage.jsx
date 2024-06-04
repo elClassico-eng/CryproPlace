@@ -2,7 +2,7 @@ import React from "react";
 
 import { useGetAllCoinQuery } from "../../Redux/CryptoCoin/crypto.api";
 
-import { StatisticCard } from "../../Component/StatisticCard/StatisticCard";
+import { StatisticCard } from "../../Component/Dashboard/StatisticCard/StatisticCard";
 import { ShowMore } from "../../Component/Dashboard/ShowMore/ShowMore";
 
 export const HomePage = () => {
