@@ -5,7 +5,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { LandingPage } from "../Pages/LandingPage/LandingPage";
 import { Navbar } from "./Dashboard/Navbar/Navbar";
 import { HomePage } from "../Pages/Dashboard/HomePage";
-import { Extanges } from "../Pages/Dashboard/Extanges";
+import { Exchanges } from "../Pages/Dashboard/Exchanges";
 import { CryptoDetails } from "../Pages/Dashboard/CryptoDetails";
 import { Cryptocurrencies } from "../Pages/Dashboard/Cryptocurrencies";
 import { News } from "../Pages/Dashboard/News";
@@ -27,8 +27,8 @@ export const App = () => {
                         element={<Cryptocurrencies />}
                     ></Route>
                     <Route
-                        path="/dashboard/extanges"
-                        element={<Extanges />}
+                        path="/dashboard/exchanges"
+                        element={<Exchanges />}
                     ></Route>
                     <Route
                         path="/dashboard/crypto/:uuid"

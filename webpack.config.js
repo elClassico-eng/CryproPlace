@@ -1,7 +1,6 @@
 const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
 require("dotenv").config({ path: "./.env" });
 
 module.exports = (env) => {
@@ -14,6 +13,7 @@ module.exports = (env) => {
         output: {
             filename: "[name].[contenthash].js",
             path: path.resolve(__dirname, "build"),
+            publicPath: "/",
             clean: true,
         },
         plugins: [

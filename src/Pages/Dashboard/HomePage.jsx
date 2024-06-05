@@ -16,6 +16,8 @@ export const HomePage = () => {
         throw new Error("Coin is not defined :(");
     }
 
+    console.log(coinInfo);
+
     return (
         <div className="p-4 ml-[20%]">
             <div className="mb-2 border-black">

@@ -14,8 +14,6 @@ export const News = () => {
             </div>
         );
 
-    console.log(news);
-
     return (
         <>
             <div className="grid gap-6 grid-cols-4 p-4">
