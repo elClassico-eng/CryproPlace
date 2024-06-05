@@ -19,7 +19,7 @@ export const coinApi = createApi({
     refetchOnFocus: true,
     endpoints: (builder) => ({
         getCoinById: builder.query({
-            query: (id) => `/coin/${id}`,
+            query: (uuid) => `/coin/${uuid}`,
         }),
         getAllCoin: builder.query({
             query: (count) => `/coins?limit=${count}`,
@@ -28,4 +28,8 @@ export const coinApi = createApi({
     }),
 });
 
-export const { useLazyGetCoinByIdQuery, useGetAllCoinQuery } = coinApi;
+export const {
+    useLazyGetCoinByIdQuery,
+    useGetAllCoinQuery,
+    useGetCoinByIdQuery,
+} = coinApi;
