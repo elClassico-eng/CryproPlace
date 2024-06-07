@@ -19,7 +19,7 @@ export const HomePage = () => {
     console.log(coinInfo);
 
     return (
-        <div className="p-4 ml-[20%]">
+        <div className="p-4">
             <div className="mb-2 border-black">
                 <h1 className="text-4xl font-semibold mb-1">
                     Global Crypto Stats

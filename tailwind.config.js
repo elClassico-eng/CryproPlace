@@ -30,6 +30,8 @@ module.exports = {
             lightBlue: "#e6f7ff",
             border: "#d9d9d9",
             bgColor: "#e2e7d3",
+            bgColorNavbar: "#3e3e3e",
+            bgColorNavbarBlack: "#222",
         },
     },
     plugins: [],
