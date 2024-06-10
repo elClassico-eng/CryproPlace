@@ -29,7 +29,7 @@ module.exports = {
             pink: "#0071bd",
             lightBlue: "#e6f7ff",
             border: "#d9d9d9",
-            bgColor: "#e2e7d3",
+            bgColor: "#060606",
             bgColorNavbar: "#3e3e3e",
             bgColorNavbarBlack: "#222",
         },

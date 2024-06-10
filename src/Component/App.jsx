@@ -36,7 +36,7 @@ export const App = () => {
                     ></Route>
                     <Route path="/dashboard/news" element={<News />}></Route>
                 </Routes>
-                {isDashBoard && <Footer />}
+                {/* {isDashBoard && <Footer />} */}
             </div>
         </div>
     );
