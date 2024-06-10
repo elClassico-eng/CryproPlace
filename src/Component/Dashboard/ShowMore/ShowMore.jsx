@@ -8,7 +8,7 @@ export const ShowMore = ({ title, linkTo, currencies }) => {
     return (
         <div className="flex flex-col gap-3 mb-16">
             <div className="flex justify-between items-center">
-                <h2 className="text-4xl font-bold">{title}</h2>
+                <h2 className="text-2xl font-bold">{title}</h2>
                 <Link to={linkTo}>
                     <h3 className="text-xl font-bold text-black no-underline hover:underline">
                         Show More
