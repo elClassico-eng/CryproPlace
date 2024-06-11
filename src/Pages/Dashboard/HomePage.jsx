@@ -6,8 +6,6 @@ import { StatisticCard } from "../../Component/Dashboard/StatisticCard/Statistic
 import { ShowMore } from "../../Component/Dashboard/ShowMore/ShowMore";
 import { CryptoChart } from "../../Component/Dashboard/CryptoChart/CryptoChart";
 
-import { Navbar } from "../../Component/LandingPage/Navbar/Navbar";
-
 export const HomePage = () => {
     const {
         isLoading: isLoadingCoin,
@@ -16,13 +14,12 @@ export const HomePage = () => {
         data: coinInfo,
     } = useGetAllCoinQuery(10);
 
-    if (isError) {
-        throw new Error("Coin is not defined :(");
-    }
+    if (isError) return <div>Coin not found. Try later.</div>;
+
+    console.log(coinInfo);
 
     return (
         <div className="h-full w-full">
-            <Navbar />
             <div className="flex flex-col justify-center items-center gap-10 md:gap-20 lg:gap-28 text-black  w-full h-full text-center ">
                 <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl uppercase leading-snug">
                     Get a complete overview of <br />

@@ -1,5 +1,4 @@
 import React from "react";
-
 import moment from "moment";
 import bg from "../../../Images/bgImag.jpg";
 
@@ -21,7 +20,7 @@ export const NewsCard = ({ resource, index }) => {
                 className="absolute inset-0 w-full h-full z-0 object-cover"
             />
             <div className="absolute bottom-0 left-0 p-4 z-20">
-                <h2 className="font-bold text-lg text-white mb-2">
+                <h2 className="font-bold text-sm md:text-lg text-white mb-2">
                     {resource?.title}
                 </h2>
                 <div className="flex justify-between items-center text-sm text-gray-300">
